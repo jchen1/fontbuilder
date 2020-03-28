@@ -36,6 +36,10 @@ bool BMFontExporter::Export(QByteArray &out)
         + QString(" file=\"%1\"").arg(texFilename())
         .toUtf8()).append('\n');
 
+    out.append( QString("chars")
+        + QString(" count=%1").arg(symbols().length())
+        .toUtf8()).append('\n');
+
     foreach(const Symbol& c , symbols()) {
         out.append( QString("char")
             + QString(" id=%1").arg(c.id)
