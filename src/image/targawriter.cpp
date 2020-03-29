@@ -185,7 +185,7 @@ QImage* TargaImageWriter::reload(QFile& file) {
     /// @todo endian !
     QImage* img = 0;
     img = new QImage(width,height,QImage::Format_ARGB32);
-    img->fill(0);
+    img->fill(0xff000000);
     uchar* data = reinterpret_cast<uchar*>(img->bits());
     if (bpp==32) {
         if (!rle) {

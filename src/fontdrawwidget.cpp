@@ -73,7 +73,7 @@ void FontDrawWidget::paintEvent(QPaintEvent *) {
         if (m_renderer_data->chars[c.symbol].locked)
             painter.setPen(QColor(255,0,0,255));
         else
-            painter.setPen(QColor(0,0,255,255));
+            painter.setPen(QColor(255,0,255,255));
         painter.drawRect((c.x)*m_scale,(c.y)*m_scale,(c.w)*m_scale-1,(c.h)*m_scale-1);
     }
 }
