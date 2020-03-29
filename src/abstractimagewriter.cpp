@@ -67,7 +67,7 @@ static void placeImage(QImage& dst,int x,int y,const QImage& src) {
 QImage AbstractImageWriter::buildImage() {
     QImage pixmap(layout()->width(),layout()->height(),QImage::Format_ARGB32);
 
-    pixmap.fill(0x00ffffff);
+    pixmap.fill(0xff000000);
 
 
     /*

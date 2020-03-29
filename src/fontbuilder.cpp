@@ -231,7 +231,7 @@ void FontBuilder::setLayoutImage(const QImage& image) {
 
 void FontBuilder::onLayoutChanged() {
     QImage image (m_layout_data->width(),m_layout_data->height(),QImage::Format_ARGB32);
-    image.fill(0);
+    image.fill(0xff000000);
     {
         QPainter painter(&image);
         foreach (const LayoutChar& c,m_layout_data->placed()) {
